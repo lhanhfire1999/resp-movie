@@ -15,10 +15,10 @@
 
 html {
   font-size: 16px; /* 0.25rem = 4px */
+  font-family: 'Cairo', sans-serif;
 }
 
 body {
-  font-family: 'Cairo', sans-serif;
   background-color: var(--body-bg);
   color: var(--text-color);
   padding-top: var(--nav-height);
@@ -91,6 +91,7 @@ img {
 .nav-menu a {
   text-transform: uppercase;
   font-weight: 700;
+  display: block;
 }
 
 .nav-menu a:hover {
@@ -108,9 +109,8 @@ a.logo:hover {
   text-decoration: uppercase;
   font-size: 1.25rem;
   font-weight: 700;
-
-  display: inline-flex;
-  align-items: center;
+  /* display: inline-flex; */
+  /* align-items: center; */
   position: relative;
 }
 
@@ -131,6 +131,7 @@ a.logo:hover {
 }
 
 .btn span {
+  position: relative;
   z-index: 1;
 }
 
@@ -139,12 +140,13 @@ a.logo:hover {
   height: var(--size);
   width: var(--size);
 
-  display: flex;
+  display: none;
   align-items: center;
+  cursor: pointer;
   /* position: relative;
   z-index: 101; */
-  cursor: pointer;
 }
+
 .hamburger {
   position: relative;
 }
@@ -188,4 +190,43 @@ a.logo:hover {
 
 .hamburger-menu.active .hamburger {
   background-color: transparent;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 850px) {
+  html {
+    font-size: 12px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 80%;
+    /* width: 240px;
+    max-width: 100%; */
+    height: 100vh;
+
+    background-color: #000;
+    padding: 20px;
+    transition: 0.4s ease-in-out;
+    display: block;
+  }
+
+  .nav-menu li + li {
+    margin-left: 0;
+  }
+
+  .nav-menu a {
+    padding: 12px 28px;
+    text-align: center;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
 }
