@@ -5,6 +5,7 @@
   --text-color: #fff;
 
   --nav-height: 60px;
+  --space-top: 30px;
 }
 
 * {
@@ -26,6 +27,7 @@ body {
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 img {
@@ -51,7 +53,7 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.nav-wrapper {
+.nav-wraper {
   position: fixed;
   top: 0;
   left: 0;
@@ -91,7 +93,6 @@ img {
 .nav-menu a {
   text-transform: uppercase;
   font-weight: 700;
-  display: block;
 }
 
 .nav-menu a:hover {
@@ -109,8 +110,8 @@ a.logo:hover {
   text-decoration: uppercase;
   font-size: 1.25rem;
   font-weight: 700;
-  /* display: inline-flex; */
-  /* align-items: center; */
+  display: inline-flex;
+  align-items: center;
   position: relative;
 }
 
@@ -129,10 +130,14 @@ a.logo:hover {
 .btn-hover:hover::before {
   width: 100%;
 }
-
+.btn i,
 .btn span {
   position: relative;
   z-index: 1;
+}
+
+.btn i {
+  margin-right: 1rem;
 }
 
 .hamburger-menu {
@@ -192,6 +197,83 @@ a.logo:hover {
   background-color: transparent;
 }
 
+.hero-slide-item {
+  position: relative;
+}
+
+.hero-slide-item-img {
+  padding-top: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide-item-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--text-color);
+  display: flex;
+}
+
+.item-content-wraper {
+  padding-left: 5rem;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.item-content-wraper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.item-content-title {
+  font-size: 5rem;
+  line-height: 5rem;
+  font-weight: 900;
+}
+
+.movie-infos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: calc(var(--space-top) / 2);
+}
+.movie-info {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.movie-info + .movie-info {
+  margin-left: 8px;
+}
+
+.movie-info span {
+  margin-left: 4px;
+}
+.item-content-description {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-top: var(--space-top);
+}
+
+.item-action {
+  margin-top: var(--space-top);
+}
+
 /* RESPONSIVE */
 @media only screen and (max-width: 850px) {
   html {
@@ -223,6 +305,7 @@ a.logo:hover {
 
   .nav-menu a {
     padding: 12px 28px;
+    display: block;
     text-align: center;
   }
 
