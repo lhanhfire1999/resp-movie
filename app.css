@@ -199,13 +199,10 @@ a.logo:hover {
 
 .hero-slide-item {
   position: relative;
-}
-
-.hero-slide-item-img {
   padding-top: 40%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
 }
 
 /* .hero-slide-item-content {
@@ -228,7 +225,6 @@ a.logo:hover {
   color: var(--text-color);
   padding-left: 5rem;
   background-color: rgba(0, 0, 0, 0.6);
-  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -329,6 +325,8 @@ a.logo:hover {
   position: absolute;
   top: 50%;
   transform: 50%;
+  border: none;
+  outline: none;
 }
 .carousel-nav-center .owl-nav .owl-prev {
   left: 4px;
@@ -390,7 +388,7 @@ a.logo:hover {
     font-size: 14px;
   }
 
-  .hero-slide-item-img {
+  .hero-slide-item {
     padding-top: 50%;
   }
 
@@ -406,6 +404,20 @@ a.logo:hover {
 
   .hamburger-menu {
     display: flex;
+  }
+
+  .hero-slide-item {
+    height: max-content;
+    padding-top: 0;
+  }
+
+  .hero-slide-item-content {
+    position: relative;
+    height: max-content;
+    width: 100%;
+    padding-right: 5rem;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .nav-menu {
