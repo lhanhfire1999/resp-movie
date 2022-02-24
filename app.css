@@ -27,7 +27,8 @@ body {
 
 a {
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  color: unset;
 }
 
 img {
@@ -41,7 +42,7 @@ img {
 .container {
   max-width: 1920px;
   padding: 0 40px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .overlay {
@@ -252,6 +253,7 @@ a.logo:hover {
   align-items: center;
   flex-wrap: wrap;
   margin-top: calc(var(--space-top) / 2);
+  color: var(--text-color);
 }
 .movie-info {
   display: flex;
@@ -376,10 +378,22 @@ a.logo:hover {
 }
 
 .movie-item-title {
-  color: var(--text-color);
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.5rem;
+}
+
+.section {
+  padding-top: 80px;
+}
+.title-section {
+  margin-bottom: 28px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-left: 20px;
+  border-left: 4px solid var(--main-color);
+  display: flex;
+  text-align: center;
 }
 
 /* RESPONSIVE */
