@@ -16,16 +16,16 @@ $(document).ready(() => {
     loop: true,
     nav: true,
     navText: navText,
-    // autoplay: true,
-    // autoplayHoverPause: true,
+    autoplay: true,
+    autoplayHoverPause: true,
   });
 
   $('#top-movies-slide').owlCarousel({
     items: 2,
     dots: false,
     loop: true,
-    // autoplay: true,
-    // autoplayHoverPause: true,
+    autoplay: true,
+    autoplayHoverPause: true,
     responsive: {
       500: {
         items: 3,
@@ -46,8 +46,6 @@ $(document).ready(() => {
     loop: true,
     margin: 16,
     navText: navText,
-    // autoplay: true,
-    // autoplayHoverPause: true,
     responsive: {
       500: {
         items: 3,

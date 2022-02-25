@@ -75,7 +75,7 @@ img {
 
 .logo {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .nav-menu {
@@ -447,13 +447,14 @@ a.logo:hover {
 
 .footer .logo {
   margin-top: -2.5rem;
+  font-size: 2rem;
 }
 
 .footer .content {
   margin-top: 20px;
 }
 
-.footer .content p {
+.footer p {
   font-size: 1.25rem;
   line-height: 1.5rem;
   text-align: justify;
@@ -493,12 +494,12 @@ a.logo:hover {
   font-weight: 700;
 }
 
-.footer .content a {
+.footer a {
   font-size: 1.25rem;
   transition: transform 0.4s ease-in-out;
 }
 
-.footer .content a:hover {
+.footer a:hover {
   color: var(--main-color);
   transform: translateX(8px);
 }
