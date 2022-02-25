@@ -40,7 +40,7 @@ $(document).ready(() => {
   });
 
   $('.movies-slide').owlCarousel({
-    items: 1,
+    items: 2,
     dots: false,
     nav: true,
     loop: true,

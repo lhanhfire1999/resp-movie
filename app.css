@@ -5,13 +5,17 @@
   --text-color: #fff;
 
   --nav-height: 60px;
-  --space-top: 30px;
+  --space: 28px;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
 }
 
 html {
@@ -37,12 +41,6 @@ img {
 
 .main-color {
   color: var(--main-color);
-}
-
-.container {
-  max-width: 1920px;
-  padding: 0 40px;
-  margin: 0 auto;
 }
 
 .overlay {
@@ -203,7 +201,8 @@ a.logo:hover {
   padding-top: 40%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
+  overflow: hidden;
 }
 
 /* .hero-slide-item-content {
@@ -244,7 +243,7 @@ a.logo:hover {
 
 .item-content-title {
   font-size: 5rem;
-  line-height: 5rem;
+  line-height: 5.5rem;
   font-weight: 900;
 }
 
@@ -252,7 +251,7 @@ a.logo:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: calc(var(--space-top) / 2);
+  margin-top: calc(var(--space) / 2);
   color: var(--text-color);
 }
 .movie-info {
@@ -279,11 +278,11 @@ a.logo:hover {
 .item-content-description {
   font-size: 1.25rem;
   line-height: 1.5rem;
-  margin-top: var(--space-top);
+  margin-top: var(--space);
 }
 
 .item-action {
-  margin-top: var(--space-top);
+  margin-top: var(--space);
 }
 
 .top-down {
@@ -384,7 +383,7 @@ a.logo:hover {
 }
 
 .section {
-  padding-top: 80px;
+  margin-top: 80px;
 }
 .title-section {
   margin-bottom: 28px;
@@ -396,8 +395,52 @@ a.logo:hover {
   text-align: center;
 }
 
+.pricing-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  margin-bottom: var(--space);
+}
+.pricing-box {
+  padding: 40px;
+  background-color: var(--box-bg);
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: var(--space);
+
+  border-top: 4px solid transparent;
+  transform: translateY(0);
+  transition: 0.4s ease-in-out;
+  user-select: none;
+}
+.pricing-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space);
+  font-size: 1.5rem;
+}
+.pricing-box-price {
+  font-weight: 700;
+}
+.pricing-box-content {
+  font-size: 1.25rem;
+  margin-bottom: calc(var(--space) * 2);
+}
+
+.pricing-box:hover {
+  transform: translateY(-12px);
+  border-top: 4px solid var(--main-color);
+}
+
+.del {
+  text-decoration: line-through;
+}
+
 /* RESPONSIVE */
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 851px) and (max-width: 1280px) {
   html {
     font-size: 14px;
   }
@@ -444,6 +487,7 @@ a.logo:hover {
     height: 100vh;
 
     background-color: #000;
+    text-align: center;
     padding: 20px;
     transition: 0.4s ease-in-out;
     display: block;
@@ -456,7 +500,6 @@ a.logo:hover {
   .nav-menu a {
     padding: 12px 28px;
     display: block;
-    text-align: center;
   }
 
   .nav-menu.active {
